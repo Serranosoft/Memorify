@@ -79,9 +79,14 @@ export default Cardboard
 const CardsWrapper = styled.div`
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(5, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 16px;
     text-align: center;
+
+    @media(max-width: 650px) {
+        grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+        gap: 8px
+    }
 `
 
 const WinScreen = styled.div`
@@ -98,6 +103,16 @@ const GifWinner = styled.img`
     width: 550px;
     height: 350px;
     margin: 16px 0;
+
+    @media(max-width: 768px) {
+        width: 350px;
+        height: 200px;
+    }
+
+    @media(max-width: 480px) {
+        width: 150px;
+        height: 70px;
+    }
 `
 
 const ReplayButton = styled.button`

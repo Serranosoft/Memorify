@@ -73,4 +73,13 @@ const Gametable = styled.div`
     gap: 16px;
     margin: 16px auto;
 
+    @media(max-width: 768px) {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    @media(max-width: 480px) {
+        grid-template-rows: 1fr 1fr;
+    }
+
 `

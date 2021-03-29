@@ -54,6 +54,9 @@ const CardImg = styled.img({
     backgroundSize: "cover",
     backgroundPosition: "center center",
     backgroundRepeat: "no-repeat",
+    '@media(max-width: 480px)': {
+        height: '200px'
+      }
 
 }, props => ({ backgroundImage: `url(${props.image})` }))
 

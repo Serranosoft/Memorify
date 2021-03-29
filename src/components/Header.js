@@ -34,7 +34,7 @@ const HeadImage = styled.div`
     
 
     @media (max-width: 550px) {
-        height: 120px;
+        height: 150px;
     }
     `
 

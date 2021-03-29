@@ -1,24 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Header from "./components/Header"
+import Footer from "./components/Footer"
+import Gameboard from "./components/Gameboard"
+import { Global, css } from '@emotion/react'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Global
+        styles={css`
+                *,*::after,*::before {
+                    box-sizing: border-box;
+                    margin: 0;
+                    padding:0;
+                }
+                
+                html {
+                    font-family: 'Inter', sans-serif;
+                }
+                body {
+                    background: #f1f1f1;
+                    color: #1c1c1c;
+                }`
+        }
+      />
+      <Header />
+      <Gameboard />
+      <Footer />
+    </>
   );
 }
 

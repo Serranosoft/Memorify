@@ -4,6 +4,7 @@ import styled from '@emotion/styled'
 import test from "../images/test.gif"
 import test2 from "../images/test2.gif"
 import cardsArray from "../resources/cardsArray"
+import { TwitterShareButton, TwitterIcon } from "react-share";
 
 const Cardboard = (props) => {
     const [cards, shuffleCards] = useState(shuffleArray(cardsArray()))
@@ -26,7 +27,13 @@ const Cardboard = (props) => {
                 <WinScreen>
                     <h1>HAS GANADO</h1>
                     <GifWinner src={test} />
-                    <ReplayButton onClick={()=> {shuffleCards(cardsArray()); props.replay()}}>VOLVER A JUGAR</ReplayButton>
+                    <p style={{margin: "16px 0", fontSize: "12px", fontWeight: "bold"}}>Comparte tu puntuación conmigo en Twitter</p>
+                    <TwitterShareButton
+                        url="memorify.manu-scholz.com"
+                        title={`He conseguido la máxima puntuación en el juego de @ImScholz`}>
+                        <TwitterIcon size="32px" round={true} />
+                    </TwitterShareButton>
+                    <ReplayButton onClick={() => { shuffleCards(cardsArray()); props.replay() }}>VOLVER A JUGAR</ReplayButton>
                 </WinScreen>
             )
         } else if (props.lose) {
@@ -39,22 +46,22 @@ const Cardboard = (props) => {
             )
         } else {
             return (
-            <CardsWrapper>
-                {cards.map(el => {
-                    return (
-                        <Card
-                            key={el.id}
-                            image={el.image}
-                            name={el.name}
-                            shuffleCards={shuffleCards}
-                            cardPlayed={cardPlayed}
-                            incrementScore={props.incrementScore}
-                            finishGame={props.finishGame}
-                            reset={props.reset} />
-                    )
-                })}
+                <CardsWrapper>
+                    {cards.map(el => {
+                        return (
+                            <Card
+                                key={el.id}
+                                image={el.image}
+                                name={el.name}
+                                shuffleCards={shuffleCards}
+                                cardPlayed={cardPlayed}
+                                incrementScore={props.incrementScore}
+                                finishGame={props.finishGame}
+                                reset={props.reset} />
+                        )
+                    })}
 
-            </CardsWrapper>
+                </CardsWrapper>
 
             )
         }

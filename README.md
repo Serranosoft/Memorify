@@ -1,70 +1,36 @@
-# Getting Started with Create React App
+# Memorify
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Memorify ha sido creado con [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+Se trata de un juego de memoria. Completa el reto eligiendo una carta diferente sin repetir ninguna de las anterior. ¿Fácil? Cada vez que eliges una carta todas se vuelven a repartir en un orden distinto haciendo que el reto sea mas difícil de lo que parece.
 
-In the project directory, you can run:
+<img width="550px" align="center" margin="0 auto" src="https://curricufy.manu-scholz.com/assets/memorifyMetaData.png" />
+
+
+## Tecnologías usadas
+
+Esta aplicación forma parte del JavaScript bootcamp de [TheOdinProject](https://theodinproject.com/).
+
+Ha sido construida con ReactJS utilizando Hooks para mantener el estado y localStorage para almacenar el mejor resultado de cada usuario en cache.
+
+### Librerías externas
+
+- [Emotion](https://github.com/emotion-js) -> CSS-in-JS para componentes React. Optimizando el rendimiento al solo cargar el CSS necesario cuando el componente se monta.
+- [react-share](https://github.com/nygardk/react-share) -> Componentes que permiten compartir en redes sociales (Usado para compartir los resultados de la partida en Twiiter).
+
+## Probar Memorify en vivo
+
+Puedes probar esta aplicación en vivo desde el siguiente enlace
+https://memorify.manu-scholz.com/
+
+
+## Probar Memorify desde código
+
+Puedes realizar cambios y probar esta aplicación con el siguiente comando
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Arranca la aplicación en modo desarrollo
+Abre [http://localhost:3000](http://localhost:3000) para visualizarlo desde el navegador.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+La página se actualizará automáticamente al realizar cualquier cambio

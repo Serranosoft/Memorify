@@ -47,6 +47,7 @@ const Gameboard = () => {
 
     useEffect(() => {
         storage.setItem("bs", bestScore)
+        //eslint-disable-next-line
     }, [bestScore])
 
     return (
